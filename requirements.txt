@@ -1,2 +1,9 @@
 google-genai
 streamlit
+speechrecognition 
+pyttsx3 
+pywhatkit 
+keyboard 
+googlesearch-python 
+pyaudio
+speech_recognition
