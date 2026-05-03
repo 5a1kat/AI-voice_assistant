@@ -1,9 +1,9 @@
 import streamlit as st
 from google import genai
-from config import apikey
+from st.secrets import GEMINI_API_KEY
 
 # Initialize Gemini
-client = genai.Client(api_key=apikey)
+client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 st.title("🤖 Gemini AI Voice Assistant")
 
