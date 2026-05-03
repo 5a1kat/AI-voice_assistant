@@ -1,5 +1,6 @@
 google-genai
 streamlit
+streamlit-mic-recorder
 speechrecognition 
 pyttsx3 
 pywhatkit 
