@@ -1,9 +1,13 @@
 import streamlit as st
 from google import genai
-#from st.secrets import apikey
+from google.genai import types # Add this import
 
-# Initialize Gemini
-client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
+# Initialize Gemini with the 'v1' API version
+client = genai.Client(
+    api_key=st.secrets["GEMINI_API_KEY"],
+    http_options=types.HttpOptions(api_version='v1') # This line fixes the 404 error
+)
+
 
 st.title("🤖 Gemini AI Voice Assistant")
 st.write(f"Key loaded: {st.secrets['GEMINI_API_KEY'][:5]}...")
