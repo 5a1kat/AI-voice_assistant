@@ -12,9 +12,17 @@ import pywhatkit
 import keyboard
 import pyttsx3
 import json
+from streamlit_mic_recorder import mic_recorder
 
 
 
+
+audio = mic_recorder(start_prompt="🎤 Click to Speak", stop_prompt="Stop")
+
+if audio:
+    # Your speech_recognition logic goes here to convert 
+    # the audio['bytes'] into text for Gemini.
+    st.audio(audio['bytes'])
 
 
 def say(text):          #for windows | comment this 6 line if this code not work on mac
