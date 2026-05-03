@@ -6,6 +6,7 @@ from google import genai
 client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 st.title("🤖 Gemini AI Voice Assistant")
+st.write(f"Key loaded: {st.secrets['GEMINI_API_KEY'][:5]}...")
 
 # Use Streamlit's chat interface
 if "messages" not in st.session_state:
